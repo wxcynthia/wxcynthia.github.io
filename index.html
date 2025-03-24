@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cynthia Xin Wen | AI Researcher & Developer</title>
+  
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap">
+  
+  <!-- Custom CSS -->
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    a {
+      text-decoration: none;
+      color: #2962ff;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0039cb;
+    }
+    /* Navigation */
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      margin-right: 20px;
+      font-weight: bold;
+      color: #333;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .navbar a:hover {
+      background: #f0f7ff;
+      color: #2962ff;
+    }
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px 20px; /* add top padding to account for fixed navbar */
+    }
+    /* Sections */
+    .section {
+      padding: 60px 0;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section h1 {
+      margin-bottom: 30px;
+      font-size: 2.2em;
+      color: #2962ff;
+      border-left: 5px solid #2962ff;
+      padding-left: 15px;
+    }
+    .section h2 {
+      margin: 25px 0 15px;
+      font-size: 1.6em;
+      color: #333;
+    }
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 30px;
+    }
+    .about img.avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .about .bio {
+      margin-left: 40px;
+      max-width: 800px;
+    }
+    .about h3 {
+      margin: 10px 0 20px;
+      color: #555;
+    }
+    /* Projects Section */
+    .project-list {
+      list-style: none;
+      padding: 0 30px;
+    }
+    .project {
+      margin-bottom: 40px;
+      padding: 25px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .project .title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #2962ff;
+    }
+    .project .links {
+      margin: 15px 0;
+    }
+    .project .links a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 6px 12px;
+      background: #e3f2fd;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .project .links a:hover {
+      background: #bbdefb;
+    }
+    .project .description {
+      line-height: 1.7;
+    }
+    .highlight {
+      background: #fffde7;
+      padding: 2px 5px;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+    /* Contact Section */
+    .contact {
+      padding: 30px;
+    }
+    .contact ul {
+      list-style: none;
+      font-size: 1.1em;
+    }
+    .contact li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .contact li i {
+      width: 30px;
+      color: #2962ff;
+      font-size: 1.3em;
+      margin-right: 10px;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #f5f5f5;
+      margin-top: 50px;
+      color: #777;
+      font-size: 0.9em;
+    }
+    /* Updated Media container styles - making video containers bigger */
+    .project-media {
+      margin: 20px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      max-width: 100%;
+      padding: 15px;
+      background: #f0f0f0;
+      text-align: center;
+    }
+    
+    .project-media img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      display: inline-block;
+      border-radius: 6px;
+    }
+    
+    .project-media iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 480px;
+      border: none;
+      display: inline-block;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    
+    /* Book cover display */
+    .book-cover {
+      float: right;
+      margin: 0 0 20px 20px;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .project-media iframe {
+        width: 100%;
+        height: 240px;
+      }
+      .project-media img {
+        max-width: 100%;
+        max-height: 480px;
+      }
+      .book-cover {
+        float: none;
+        margin: 20px auto;
+        display: block;
+      }
+    }
+    
+    /* Special container for cropping the GIF and centering content */
+    .cropped-gif-container {
+      width: 95%;
+      height: auto;
+      max-height: 550px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border-radius: 6px;
+      padding: 0;
+      margin: 0 auto;
+    }
+    
+    .cropped-gif-container img {
+      display: block;
+      width: auto;
+      max-width: 70%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+
+      position: relative;
+      clip-path: inset(0 100px 0 100px);         /* top, right, bottom, left */
+      -webkit-clip-path: inset(0 100px 0 100px); /* same for Safari */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#about">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#company">Company</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <img src="img/cynthia.JPG" alt="Cynthia Xin Wen" class="avatar">
+      <div class="bio">
+        <h1>Cynthia Xin Wen</h1>
+        <h3>AI Researcher & Data Analyst & Financial Risk Management</h3>
+       </p>
+        <ul style="list-style-type: disc; margin-left: 25px; color: #2962ff;">
+          <li><span style="color: #333;">Multilingual communication in <strong>Chinese, Japanese, and English</strong></span></li>
+          <li><span style="color: #333;">Commitment to <strong>love and peace</strong> in all professional endeavors</span></li>
+          <li><span style="color: #333;">Balanced approach to <strong>technology and mindfulness</strong></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h1>Selected Projects</h1>
+      <p style="padding: 0 30px; margin-bottom: 30px;">
+        All my projects share a common goal: to evolve "blind, deaf" Large Language Models into superhuman systems 
+        that can see, hear, and reason about the physical world, in a language we all understand and trust. 
+        I aim to usher in a new era of robotics and AI capable of surpassing human abilities in certain tasks 
+        while remaining transparent, controllable, and beneficial to humanity.
+      </p>
+      
+      <div class="project-list">
+        <div class="project">
+          <h2 class="title">AI-Powered Neural Implant for PTSD Monitoring</h2>
+          <div class="links">
+            <a href="https://wxcynthia.github.io/AImonitor/" target="_blank"><i class="fas fa-globe"></i> Project Website</a>
+            <a href="https://youtu.be/0spz_fBXCEw" target="_blank"><i class="fab fa-youtube"></i> Demo Video</a>
+          </div>
+          
+          <!-- Embedded YouTube Video -->
+          <div class="project-media">
+            <iframe src="https://www.youtube.com/embed/0spz_fBXCEw" allowfullscreen></iframe>
+          </div>
+          
+          <div class="description">
+            <p>
+              I developed a cutting-edge dual-loop system integrating a responsive neural implant with an AI-powered wearable platform to 
+              continuously monitor and intervene in PTSD episodes. This system is the <span class="highlight">first automatic self-reporting design</span> 
+              in its field, enabling continuous capture and analysis of both neural signals and environmental contexts without requiring manual input from patients.
+            </p>
+            <p>
+              The implanted device detects pathological brain activity in real time and delivers targeted neurostimulation when needed. 
+              Simultaneously, smart wearables and Meta glasses automatically identify environmental triggers and record contextual data, 
+              allowing for near-instant feedback and personalized therapeutic interventions.
+            </p>
+            <p>
+              Leveraging a multimodal large language model, the system seamlessly integrates internal neural states with external 
+              situational awareness, marking a pivotal advancement in PTSD therapy and naturalistic neuroscience research, bridging 
+              the gap between clinical treatment and everyday life.
+            </p>
+          </div>
+        </div>
+
+        <div class="project">
+          <h2 class="title">Building A Unified AI-centric Language System</h2>
+          <div class="links">
+            <a href="https://arxiv.org/abs/2502.04488" target="_blank"><i class="fas fa-file-alt"></i> Research Paper</a>
+            <a href="https://wxcynthia.github.io/AIlanguage/" target="_blank"><i class="fab fa-github"></i> GitHub Project</a>
+          </div>
+          
+          <!-- Image for AI Language System with special class -->
+          <div class="project-media">
+            <div class="cropped-gif-container">
+              <img src="img/ai-language-system.gif" alt="AI Language System Visualization">
+            </div>
+          </div>
+          
+          <div class="description">
+            <p>
+              I co-authored groundbreaking research introducing the <span class="highlight">first-ever unified language system</span>, 
+              published on arXiv and submitted for review at ICML 2025. This project addresses a critical danger: as multiple 
+              intelligent agents converse, they can develop private "sub-languages" that humans cannot interpret.
+            </p>
+            <p>
+              We observed that DeepSeek's R1 zero thought process seems to use different languages for different types of problems, 
+              inspiring us to design a language system that is AI-centric yet still interpretable by humans. Instead of adding more tokens 
+              and attention blocks to large models, we focused on compressing meaning into a more efficient representation—spanning the 
+              entire semantic space without human grammar constraints.
+            </p>
+            <p>
+              Our unified language safeguards against opaque AI behavior, ensures interpretability in agent-to-agent conversations, and 
+              could potentially reduce inference overhead by approximately 15%, potentially slashing computation costs by $15.9 billion annually.
+            </p>
+          </div>
+        </div>
+
+        <div class="project">
+          <h2 class="title">4D Vision Transformer for Video Understanding</h2>
+          <div class="links">
+            <a href="https://www.youtube.com/watch?v=XuKRg7bRnME" target="_blank"><i class="fab fa-youtube"></i> Demo Video</a>
+            <a href="https://huggingface.co/spaces/wxcyn/Video-Analysis-Public" target="_blank"><i class="fas fa-code"></i> HuggingFace Demo (Password: WWydsBT&)</a>
+          </div>
+          
+          <!-- Embedded YouTube Video -->
+          <div class="project-media">
+            <iframe src="https://www.youtube.com/embed/XuKRg7bRnME" allowfullscreen></iframe>
+          </div>
+          
+          <div class="description">
+            <p>
+              To empower LLMs with visual capabilities, I developed a 4D time-encoded Vision Transformer with temporal continuity and 
+              spatial intelligence, achieving <span class="highlight">near-superhuman comprehension of dynamic real-world events</span>.
+            </p>
+            <p>
+              While existing solutions like SLAM and NeRF focus on static scenes, our approach identifies which elements remain unchanged 
+              over time and interprets these changes according to physical laws—allowing it to predict outcomes and explain why they occur. 
+              For example, our model can infer that a ball may collide with a TV even when they never appear in the same frame.
+            </p>
+            <p>
+              In benchmarking, our model surpassed industry-leading metrics and outperformed competitive systems—including Google Gemini 1.5 
+              and Reka—<span class="highlight">almost three weeks before Google released the Gemini 2.0 Flash model</span>. We've initiated 
+              discussions with MIT Mechanical Translational Engineering Lab to deploy this model for tracking pig health and emotional states 
+              using surveillance data.
+            </p>
+          </div>
+        </div>
+
+        <div class="project">
+          <h2 class="title">Accessibility-Focused Subtitle Generator for the Deaf Community</h2>
+          <div class="links">
+            <a href="https://youtube.com/shorts/jO7XPpAj64o?feature=share" target="_blank"><i class="fab fa-youtube"></i> Demo Video</a>
+            <a href="https://github.com/edwardhongwang/SDH_contextualized-subtitles-for-deaf" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+          </div>
+          <div class="description">
+            <p>
+              Most speech-to-text systems focus exclusively on converting audio into raw text, overlooking context, non-speech cues, and 
+              emotional nuance. Our system genuinely "listens" and interprets the soundtrack, adding clarity to ambiguous phrases 
+              (like distinguishing if "the fish is 1,000 pounds" refers to weight or cost).
+            </p>
+            <p>
+              Our pipeline enhances transcripts with contextual coherence, segments content logically, incorporates ambient sounds, 
+              and analyzes tone patterns to describe emotional content—creating rich transcripts that capture the full communicative experience.
+            </p>
+            <p>
+              This approach expands accessibility for the deaf and hard-of-hearing community while being <span class="highlight">20 times cheaper 
+              than human transcription</span> ($0.1 vs $2 per minute). Considering the film subtitling market is valued at $8.51 billion in 2024, 
+              our model could save up to $6 billion. Despite its profit potential, we open-sourced the solution to promote inclusivity.
+            </p>
+          </div>
+        </div>
+
+        <div class="project">
+          <h2 class="title">Mindfulness-Oriented AI Assistant</h2>
+          <div class="links">
+            <a href="https://huggingface.co/spaces/wxcyn/NewAge-Public" target="_blank"><i class="fas fa-code"></i> HuggingFace Demo</a>
+          </div>
+          <div class="description">
+            <p>
+              Motivated by the stigma many face in seeking professional therapy, I built a model infused with teachings from diverse philosophies, 
+              blending Buddhism, Stoicism, and modern psychology. I deployed an agentic workflow—akin to Monte Carlo tree 
+              search—chaining multiple specialized sub-models for reasoning, context analysis, and moral guidance.
+            </p>
+            <p>
+              Chain-of-thought reasoning enhances this companion AI by allowing it to piece together context, emotion, and user intent 
+              more thoroughly than a single-pass approach. It can recognize subtle cues—such as signs of suicidal ideation—more reliably, 
+              ensuring empathetic engagement.
+            </p>
+            <p>
+              This approach <span class="highlight">predates mainstream "reasoning models,"</span> yet parallels their chain-of-thought breakthroughs. 
+              It proves how orchestrating multiple sub-LLMs (an early prototype of MoE) can elevate response quality by integrating 
+              spirituality and psychology into a cohesive mental health tool.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="section">
+      <h1>Spiritual Well-Being Company</h1>
+      <div style="padding: 0 30px;">
+        <img src="img/book.png" alt="Earth Online Game Guidance Book Cover" class="book-cover">
+        <p>
+          I founded <strong>HUIJUEXIN LTD</strong>, a company dedicated to spiritual well-being and authored the companion book 
+          "Earth Online Game Guidance." This venture stems from my conviction that any planet's progress requires both technological 
+          innovation and spiritual growth. Guided by my New Age beliefs, I aim to accelerate humanity's spiritual evolution in tandem 
+          with advancing technology.
+        </p>
+        <p>
+          Over the past three years, I've also supported various animal welfare initiatives, reflecting my commitment to creating a 
+          holistic impact that nurtures both people and the planet.
+        </p>
+        <p>
+          Our efforts caught the attention of industry leaders, and we were subsequently invited to join the prestigious 
+          <strong>SMC Shanghai Foundation Model Innovation Center</strong>, China's largest AI incubator. By uniting cutting-edge 
+          technology with spiritual insight, HUIJUEXIN LTD aspires to catalyze a brighter, more enlightened future for all.
+        </p>
+      </div>
+
+      <!-- Added Music Section -->
+      <div style="padding: 20px 30px 0;">
+        <h2>My Music Compositions</h2>
+        <p>Music is another form of spiritual expression in my journey. Here's a piece I composed:</p>
+        
+        <!-- Embedded YouTube Video -->
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/wLm8JU1EKuk" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <h1>Contact</h1>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:wxcynthia999@gmail.com">wxcynthia999@gmail.com</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Sydney, Australia</li>
+        <li><i class="fas fa-globe"></i> <a href="https://huggingface.co/wxcyn" target="_blank">HuggingFace Profile</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/wxcynthia" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+
+  </div>
+  
+  <footer>
+    &copy; 2024 Cynthia Xin Wen | AI Researcher & Developer
+  </footer>
+
+  <!-- jQuery (required for Slick slider if needed in future) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Slick Slider JS (optional) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    // Initialize Slick Slider here if you add a news or project slider later
+    $(document).ready(function(){
+      // Example:
+      // $('.your-slider-class').slick({ slidesToShow: 3, autoplay: true });
+    });
+  </script>
+
+</body>
+</html>
