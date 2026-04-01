@@ -208,6 +208,27 @@
       display: inline-block;
       border-radius: 6px;
     }
+
+    .mini-program-code {
+      width: 100%;
+      max-height: none;
+      display: block;
+      background: #fff;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+
+    .mini-program-panel {
+      float: right;
+      margin: 0 0 20px 20px;
+      width: 200px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #e6eefc;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(41, 98, 255, 0.12);
+    }
     
     .project-media iframe {
       width: 100%;
@@ -242,6 +263,10 @@
         float: none;
         margin: 20px auto;
         display: block;
+      }
+      .mini-program-panel {
+        float: none;
+        margin: 20px auto;
       }
     }
     
@@ -434,25 +459,24 @@
         </div>
 
         <div class="project">
-          <h2 class="title">Mindfulness-Oriented AI Assistant</h2>
-          <div class="links">
-            <a href="https://huggingface.co/spaces/wxcyn/NewAge-Public" target="_blank"><i class="fas fa-code"></i> HuggingFace Demo</a>
+          <h2 class="title">Mindfulness-Oriented AI Assistant Mini Program</h2>
+          <div class="mini-program-panel">
+            <img src="img/miniprogram.JPG" alt="Mindfulness-Oriented AI Assistant Mini Program QR code" class="mini-program-code">
           </div>
           <div class="description">
             <p>
-              Motivated by the stigma many face in seeking professional therapy, I built a model infused with teachings from diverse philosophies, 
-              blending Buddhism, Stoicism, and modern psychology. I deployed an agentic workflow—akin to Monte Carlo tree 
-              search—chaining multiple specialized sub-models for reasoning, context analysis, and moral guidance.
+              Designed as a gentle companion for everyday reflection, this mini program brings mindfulness support into a format that feels
+              immediate, private, and easy to return to. It combines spiritual insight with emotionally aware AI dialogue to help users slow
+              down, process difficult moments, and reconnect with inner clarity.
             </p>
             <p>
-              Chain-of-thought reasoning enhances this companion AI by allowing it to piece together context, emotion, and user intent 
-              more thoroughly than a single-pass approach. It can recognize subtle cues—such as signs of suicidal ideation—more reliably, 
-              ensuring empathetic engagement.
+              Rather than offering generic responses, the assistant is shaped around contemplative guidance inspired by Buddhism, Stoicism,
+              and modern psychology. The interaction style is calm, grounded, and supportive, aiming to create a sense of steadiness for users
+              navigating stress, confusion, or emotional fatigue.
             </p>
             <p>
-              This approach <span class="highlight">predates mainstream "reasoning models,"</span> yet parallels their chain-of-thought breakthroughs. 
-              It proves how orchestrating multiple sub-LLMs (an early prototype of MoE) can elevate response quality by integrating 
-              spirituality and psychology into a cohesive mental health tool.
+              The mini program format makes this experience instantly accessible: <span class="highlight">scan the code above to open it directly</span>
+              and explore a more mindful, compassionate model of human-AI interaction built for daily use.
             </p>
           </div>
         </div>
@@ -473,11 +497,6 @@
         <p>
           Over the past three years, I've also supported various animal welfare initiatives, reflecting my commitment to creating a 
           holistic impact that nurtures both people and the planet.
-        </p>
-        <p>
-          Our efforts caught the attention of industry leaders, and we were subsequently invited to join the prestigious 
-          <strong>SMC Shanghai Foundation Model Innovation Center</strong>, China's largest AI incubator. By uniting cutting-edge 
-          technology with spiritual insight, HUIJUEXIN LTD aspires to catalyze a brighter, more enlightened future for all.
         </p>
       </div>
 
